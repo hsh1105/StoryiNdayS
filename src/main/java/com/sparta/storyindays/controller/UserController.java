@@ -81,7 +81,7 @@ public class UserController {
         Page<AdminUsersResDto> responseDto = userService.getAllUserProfile(page-1, size, sortBy, isAsc);
         List<AdminUsersResDto> userList = responseDto.getContent();
         return ResponseEntity.ok().body(new CommonResDto<>(HttpStatus.OK.value()
-                ,"전체 회원 조회에 성공하였습니다 !"
+                ,"전체 회원 조회에 성공하였습니다!"
                 ,userList));
     }
 }
